@@ -672,7 +672,7 @@ header {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 200px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -689,11 +689,14 @@ header {
 }
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #66d4f4;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
+  padding: 40px;
+  border: 2px solid #ffffff;
   width: 80%;
+}
+.modal-content p {
+  color: #ffffff;
 }
 /* The Close Button */
 .close {
@@ -704,7 +707,7 @@ header {
 }
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -731,7 +734,6 @@ header {
   }
 }
 .services_main {
-  margin: 0 auto;
   zoom: 1;
 }
 .services_main:before,
@@ -842,8 +844,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .rowbubble1 .bublle,
 .rowbubble2 .bublle {
@@ -851,10 +856,10 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   padding-top: 45px;
-  -webkit-flex-basis: 33.33%;
-      -ms-flex-preferred-size: 33.33%;
-          flex-basis: 33.33%;
   padding: 10px;
 }
 .rowbubble1 {
@@ -863,6 +868,25 @@ header {
 }
 .rowbubble2 {
   padding-bottom: 100px;
+}
+@media (min-width: 420px) and (max-width: 800px) {
+  .rowbubble1,
+  .rowbubble2 {
+    width: 90%;
+  }
+  .rowbubble1 {
+    padding-top: 30px;
+  }
+  .rowbubble2 {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 420px) {
+  .rowbubble1,
+  .rowbubble2 {
+    width: 100%;
+    display: block;
+  }
 }
 .customer {
   background-image: url(../images/bg_author.png);
@@ -1008,7 +1032,7 @@ header {
       -ms-transform: scale(1.3);
           transform: scale(1.3);
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .customer {
     -webkit-background-size: contain;
             background-size: contain;
@@ -1175,11 +1199,6 @@ header {
 .columns:after {
   clear: both;
 }
-@media only screen and (max-width: 600px) {
-  .columns .columns {
-    width: 100%;
-  }
-}
 .columns .img {
   float: center;
   padding-top: 50px;
@@ -1225,4 +1244,9 @@ header {
   margin-top: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
 }
