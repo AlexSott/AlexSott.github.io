@@ -1351,6 +1351,7 @@ header {
 }
 .columns_price .price .price_value {
   font-size: 60px;
+  padding-bottom: 30px;
   background: -webkit-gradient(linear, right top, left bottom, from(#36b9ee), to(#65eef8));
   background: -webkit-linear-gradient(top right, #36b9ee, #65eef8);
   background: -o-linear-gradient(top right, #36b9ee, #65eef8);

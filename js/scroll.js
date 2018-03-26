@@ -16,4 +16,4 @@ function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
-$('html, body').animate({scrollTop: 0}, 2000);
+$('html, body').animate({scrollTop: 0}, 3000);
