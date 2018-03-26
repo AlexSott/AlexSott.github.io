@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Flaby</title>
+	<link rel="icon" href="images/logo_icon.png" type="image/gif" sizes="16x16">
 	
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -14,25 +15,35 @@
 </head>
 <body>
 	<div class="full_page">
-			
+		
+		
+		<!-- 2. Валідація.
+		3. гамбургер
+		4. fixed nav --> 
 						<!-- Section-1 -->
 		<div class="bg_flaby">
+				<button id="scrollBtn" title="Go to top">Top</button>
 			<div class="wrapper">
-				<header>
-					<a id="logo" href="/">
-						<img src="images/logo_top.png" alt="logo">
-					</a>
-					<nav>
-						<ul class="navbar">
-							<li><a href="#">home</a></li>
-							<li><a href="#">services</a></li>
-							<li><a href="#">portfolio</a></li>
-							<li><a href="#">blog</a></li>
-							<li><a href="#">contact us</a></li>
-							<li><a href="#">login</a></li>
-						</ul>
-					</nav>
-				</header>
+				<!-- <div class="header-wraper"> -->
+					<header>
+						<a href="/">
+							<img id="logo" src="images/logo_top.png" alt="logo">
+						</a>
+						<nav class="navbar" id="myNavbar">
+							
+								<a href="#">home</a>
+								<a href="#">services</a>
+								<a href="#">portfolio</a>
+								<a href="#">blog</a>
+								<a href="#GoogleMaps">contact us</a>
+								<a href="#">login</a>
+								<a href="javascript:void(0);" style="font-size:25px;" 
+									class="icon" onclick="myFunction()">&#9776;</a>
+				
+						</nav>
+					</header>
+					
+				<!-- </div> -->
 				<div class="content_flaby">
 					<h1>Flat + Free = Flaby</h1>
 					<p>A Modern Flat design corporate template for free download 
@@ -41,14 +52,13 @@
 						<button class="btn1" href="#">Google Store</button>
 						<button class="btn2" href="#">Learn More</button>	
 					</div>	
-							
-
 				</div>
 			</div>
 		</div>
 						<!-- Section-2 -->
 
 		<div class="our_services">
+			
 				<p>Welcome to</p> 
 				<h2>our services</h2>
 				<hr>
@@ -83,23 +93,23 @@
 
 		<div class="unlimited">
 			<div class="content"> 
-					<p>We have great feature with</p>
-					<h2>Unlimited Customization Features</h2>
-					<p class="secparag">There are many variations of passages of Lorem Ipsum 
-			available, the majority alteration make difficult</p>
-					<ul class="featur">
-						<li>More wordpress features with great responsive design.</li>
-						<li>Corporate flat design with necessary elements.</li>
-						<li>Free vector shape and mockup by great designer.</li>
-						<li>Full one page flat and modern ternd following goods.</li>
-					</ul>
-					<button id="btnUnlim"  href="#">Read More</button>
-						<div id="myModal" class="modal">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<p>Look for more Unlimited Customization Features..</p>
-							</div>
-						</div>
+				<p>We have great feature with</p>
+				<h2>Unlimited Customization Features</h2>
+				<p class="secparag">There are many variations of passages of Lorem Ipsum 
+		available, the majority alteration make difficult</p>
+				<ul class="featur">
+					<li>More wordpress features with great responsive design.</li>
+					<li>Corporate flat design with necessary elements.</li>
+					<li>Free vector shape and mockup by great designer.</li>
+					<li>Full one page flat and modern ternd following goods.</li>
+				</ul>
+				<button id="btnUnlim"  href="#">Read More</button>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>Look for more Unlimited Customization Features..</p>
+					</div>
+				</div>
 			</div>
 		</div>
 						<!-- Section-4 -->
@@ -110,71 +120,70 @@
 				<h2>Other services</h2>
 				<hr>
 			</div>
-				<div class="rowbubble1">					
-					<div class="bublle">
-						<div class="fa-img">	
-							<i class="far fa-lightbulb"></i>
-						</div> 
-						<div class="contbubl">
-							<h6>Idea Developing</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
-					</div>
-					<div class="bublle">
-						<div class="fa-img">
-							<i class="far fa-window-maximize"></i>
-						</div>
-						<div class="contbubl"> 
-							<h6>Best Coding</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
-					</div>
-					<div class="bublle">
-						<div class="fa-img">
-							<i class="fas fa-gamepad"></i>
-						</div>
-						<div class="contbubl">
-							<h6>Game Design</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
+			<div class="rowbubble1">					
+				<div class="bublle">
+					<div class="fa-img">	
+						<i class="far fa-lightbulb"></i>
+					</div> 
+					<div class="contbubl">
+						<h6>Idea Developing</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
 					</div>
 				</div>
-				<div class="rowbubble2">
-					<div class="bublle">
-						<div class="fa-img">
-							<i class="fa fa-compress" aria-hidden="true"></i>
-						</div>
-						<div class="contbubl">
-							<h6>Responsive Design</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
+				<div class="bublle">
+					<div class="fa-img">
+						<i class="far fa-window-maximize"></i>
 					</div>
-					<div class="bublle">
-						<div class="fa-img">
-							<i class="fas fa-cart-arrow-down"></i>
-						</div>
-						<div class="contbubl">
-							<h6>Free Shopping</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
-					</div>
-					<div class="bublle">
-						<div class="fa-img">
-							<i class="fas fa-gift"></i>
-						</div>
-						<div class="contbubl">
-							<h6>Bonus Download</h6>
-							<p>There are many variations of passages of Lorem Ipsum 
-								avaliable, but the majotityalteration in some form with design</p>
-						</div>
+					<div class="contbubl"> 
+						<h6>Best Coding</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
 					</div>
 				</div>
-			
+				<div class="bublle">
+					<div class="fa-img">
+						<i class="fas fa-gamepad"></i>
+					</div>
+					<div class="contbubl">
+						<h6>Game Design</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
+					</div>
+				</div>
+			</div>
+			<div class="rowbubble2">
+				<div class="bublle">
+					<div class="fa-img">
+						<i class="fa fa-compress" aria-hidden="true"></i>
+					</div>
+					<div class="contbubl">
+						<h6>Responsive Design</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
+					</div>
+				</div>
+				<div class="bublle">
+					<div class="fa-img">
+						<i class="fas fa-cart-arrow-down"></i>
+					</div>
+					<div class="contbubl">
+						<h6>Free Shopping</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
+					</div>
+				</div>
+				<div class="bublle">
+					<div class="fa-img">
+						<i class="fas fa-gift"></i>
+					</div>
+					<div class="contbubl">
+						<h6>Bonus Download</h6>
+						<p>There are many variations of passages of Lorem Ipsum 
+							avaliable, but the majotityalteration in some form with design</p>
+					</div>
+				</div>
+			</div>	
 		</div>
 						<!-- --Section-5-- -->
 		
@@ -190,16 +199,16 @@
 				recommended to all that you will get better support 
 				by working with	this awesome team and their expert members :)
 				</p>
-					<div class="buttons">
-						<div class="previous">
-							<i class="fas fa-long-arrow-alt-left"></i>
-							<a href="#" class="previous">Previous</a>
-						</div>
-						<div class="next">
-							<a href="#" class="next">Next</a>
-							<i class="fas fa-long-arrow-alt-right"></i>
-						</div>
+				<div class="buttons">
+					<div class="previous">
+						<i class="fas fa-long-arrow-alt-left"></i>
+						<a href="#" class="previous">Previous</a>
 					</div>
+					<div class="next">
+						<a href="#" class="next">Next</a>
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 						<!-- --Section-6-- -->
@@ -230,7 +239,7 @@
 					<img class = "img_price" src="images/book.png" alt="book">
 					<ul class="price">
 						<li class="first_pr">Student</li>
-						<li class="price_value"><sup>$</sup>39/mo</li>
+						<li class="pricepermonth"><sup><sup>$</sup></sup><span class="price_value">39</span><sub>/mo<sub></li>
 						<li>6 GB storage</li>
 						<li>Fast Brandwidth</li>
 						<li>Responsive</li>
@@ -242,11 +251,11 @@
 					<img class = "img_price" src="images/bag-7.png" alt="bag">
 					<ul class="price">	
 						<li class="first_pr">Professional</li>
-						<li class="pricepermonth"><sup>$</sup> <span class="price_value">39</span>/mo</li>
+						<li class="pricepermonth"><sup><sup>$</sup></sup><span class="price_value">39</span><sub>/mo<sub></sub></li>
 						<li>6 GB storage</li>
 						<li>Fast Brandwidth</li>
 						<li>Responsive</li>
-						<li class = "customiz">Customization</li>
+						<li>Customization</li>
 						<li class="button_price"><a href="#">Sign Up</a></li>
 					</ul>
 				</div>
@@ -254,7 +263,7 @@
 					<img class = "img_price" src="images/shoppbag.png" alt="bag">
 					<ul class="price">
 						<li class="first_pr">Unlimited</li>
-						<li class="pricepermonth"><sup>$</sup> <span class="price_value">39</span>/mo</li>
+						<li class="pricepermonth"><sup><sup>$</sup></sup> <span class="price_value">39</span><sub>/mo<sub></li>
 						<li>6 GB storage</li>
 						<li>Fast Brandwidth</li>
 						<li>Responsive</li>
@@ -263,11 +272,32 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<button onclick="topFunction()" id="scrollBtn" title="Go to top">Top</button>
-	
-	</div>	
+			</div>	
+			<div id="GoogleMaps">
+				<br><br>
+				<iframe src="https://www.google.com/maps
+				/embed?pb=!1m18!1m12!1m3!1d2571.9816714580365!2d24.
+				015403714996374!3d49.86158893750083!2m3!1f0!2f0!3f0!3m2
+				!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adda8b0fda281%3A0x6c
+				123338abc164e8!2z0L_RgNC-0YHQv9C10LrRgiDQkifRj9GH0LXRgdC7
+				0LDQstCwINCn0L7RgNC90L7QstC-0LvQsCwgNjcsINCb0YzQstGW0LIsIN
+				Cb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!
+				3m2!1suk!2sua!4v1521903382377"
+				frameborder="0" style="border:0" allowfullscreen></iframe>	
+			</div>	
+	</div>
 		<script src="js/common.js"></script>
 		<script src="js/scroll.js"></script>
+		<script>
+				function myFunction() {
+					var x = document.getElementById("myNavbar");
+					if (x.className === "navbar") {
+						x.className += " responsive";
+					} else {
+						x.className = "navbar";
+					}
+				}
+				</script>
+		<!-- <script src="js/navbarScroll.js"></script> -->
 	</body>
 </html>
