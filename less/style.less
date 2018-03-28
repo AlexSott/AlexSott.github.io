@@ -49,20 +49,17 @@
 	li {
 		list-style-type: none;
 	}
-	a {
-		color: #393;
-		text-decoration: underline;
-	}
-	a:hover {
-		color: #393;
-		text-decoration: none;
-	}
+	// a {
+	// 	color: #393;
+	// 	text-decoration: underline;
+	// }
+	// a:hover {
+	// 	color: #393;
+	// 	text-decoration: none;
+	// }
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: normal;
 	}
-	// img {
-	// 	max-width: 100%;
-	// }
 	.clr { /*Клас для відміни обтікання*/
 		clear: both;
 	}
@@ -111,7 +108,8 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		color: @color-grey;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
+		font-weight: bold;
 		}
 		hr {
 		border: none;
@@ -155,35 +153,22 @@
 		margin-right: auto;
 		margin-left: auto;
 	}
-	// .sticky {
-	// 	position: fixed;
-	// 	top: 0;
-	// 	width: 100%;
-	//   }
-	  
-	// .header-wraper {
-	// 	position: fixed;
-	// 	top: 0;
-	// 	margin-left: auto;
-	// 	margin-right: auto;
-	// 	width: 90%;
-	// 	background-color: rgba(120, 192, 249, 0.5);
-	// 	opacity: 1;
-	// }
-
 	header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid white;
-		padding-left: 10px;
-		padding-right: 10px;
+		position: fixed;
+		width: 100%;
+		background-color: rgba(120, 192, 249, 0.7);
+		top: 0;
+		max-width: 1110px;
 	}	
 	.navbar {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		padding-top: 50px;
+		padding-top: 30px;
 		padding-bottom: 30px;
 		overflow: hidden;
 		a {
@@ -203,6 +188,57 @@
 			}
 		}
 	}
+	.collapse {
+		-webkit-animation: collapse .5s ease forwards;
+				animation: collapse .5s ease forwards;
+	  }
+	  
+	  .open {
+		-webkit-animation: open .5s ease forwards;
+				animation: open .5s ease forwards;
+	  }
+	  
+	  @-webkit-keyframes collapse {
+		from {
+		  opacity: 1;
+		  top: 0;
+		}
+		to {
+		  opacity: 0;
+		  top: -73px;
+		}
+	  }
+	  
+	  @keyframes collapse {
+		from {
+		  opacity: 1;
+		  top: 0;
+		}
+		to {
+		  opacity: 0;
+		  top: -73px;
+		}
+	  }
+	  @-webkit-keyframes open {
+		from {
+		  opacity: 0;
+		  top: -73px;
+		}
+		to {
+		  opacity: 1;
+		  top: 0;
+		}
+	  }
+	  @keyframes open {
+		from {
+		  opacity: 0;
+		  top: -73px;
+		}
+		to {
+		  opacity: 1;
+		  top: 0;
+		}
+	  }
 	.navbar .icon {
 		display: none;
 	}
@@ -217,7 +253,6 @@
 		display: flex;
 		padding-top: 300px;
 		padding-bottom: 90px;
-		padding-left: 20px;
 		margin: 0;
 		text-align: left;
 		flex-wrap: wrap;
@@ -270,6 +305,7 @@
 		&:hover {
 			.btn-hover;
 		}
+		
 	}
 	.btn2 {
 		font-family: Raleway-SemiBold;
@@ -288,7 +324,7 @@
 		}
 	}	
 
-	@media screen and (min-width: 600px) and (max-width: 800px) {
+	@media screen and (min-width: 685px) and (max-width: 880px) {
 	.navbar {
 			display: flex;
 			flex-flow: row wrap;
@@ -296,10 +332,10 @@
 		}
 		.content_flaby {
 			display: flex;
-			width: 55%;
+			width: 50%;
 			padding-left: 130px;
 			align-content: center;
-			padding-top: 120px;
+			padding-top: 200px;
 			padding-bottom: 25px;
 			h1 {
 				font-size: 28px;
@@ -326,7 +362,25 @@
 			}
 		}
 	}
-	@media screen and (min-width: 300px) and (max-width: 600px) {
+	@media (min-width: 450px) and (max-width: 685px) {
+		.content_flaby {
+			flex-wrap: wrap;
+			align-items: left;
+			padding: 250px 0 0 30px;
+			margin-right: 0;
+			width: 80%;
+			#myNavbar{
+				padding-top: 10px;
+				padding-bottom: 0;
+			}
+		}
+	}
+	@media screen and (min-width: 250px) and (max-width: 450px) {
+		.navbar {
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 15px;
+		}
 		.navbar a {display: none;}
 		.navbar a.icon {
 			float: right;
@@ -345,12 +399,12 @@
 			line-height: 0.8em;
 			padding-top: 15px;
 			padding-right: 10px;
-			text-align: right;
+			text-align: center;
 			}
 		.content_flaby {
 			flex-wrap: wrap;
 			align-items: left;
-			padding: 50px 10px 0 10px;
+			padding: 10px 0 0 10px;
 			margin-right: 0;
 			width: 90%;
 			h1 {
@@ -503,22 +557,19 @@
 		}
 	}
 }
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 200px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 200px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; 
+    height: 100%; 
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); 
 }
-
-/* Modal Content */
 .modal-content {
 	background-color: #66d4f4;
     margin: auto;
@@ -529,15 +580,12 @@
 		color: #ffffff;
 	}
 }
-
-/* The Close Button */
 .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: #ffffff;
@@ -561,16 +609,13 @@
 		background-image: url(../images/bg_unlimMedia.png);
 	}
 	.content {
-		width: 97%;
-		
+		width: 97%;		
 		padding: 20px 5px 20px 5px;
-		
 		}
 }
 			// Section-4
 	
 	.services_main {
-		// margin: 0 auto;
 		.clearfix;
 		.header_proreties {
 			.header_proreties;
@@ -580,19 +625,16 @@
 			font-weight: bold;
 			font-size: 18px;
 			color: @color-grey;
-			// padding-bottom: 20px;
 		}
 		.bublle p {
 			font-family: Raleway-Medium;
 			font-size: 14px;
 			line-height: 1.8em;
 			color: #7c7c7c;
-			// padding-bottom: 40px;
 		}
 		.fa-img {
 			display: flex;
 			font-size:2em; 
-			// color: linear-gradient(to bottom left, #58c0f0, #88f6fa);
 			color: #58c0f0;
 			padding-right: 10px;
 			padding-bottom: 50px;
@@ -641,7 +683,6 @@
 			padding-bottom: 0;
 		}
 	}
-
 			// --Section-5--
 		
 	.customer {
@@ -763,7 +804,6 @@
 		justify-content: flex-end;
 		align-items: center;
 	}
-
 	@media (min-width: 420px) and (max-width: 800px) {
 		.great-resourse {
 			margin: 10px;
@@ -852,6 +892,7 @@
 			padding-bottom: 30px;
 			background: linear-gradient(to bottom left,	#36b9ee, #65eef8);
 			-webkit-background-clip: text;
+			background-clip: text;
 			-webkit-text-fill-color: transparent; 
 			}
 		.price li {
@@ -912,7 +953,7 @@
 		display: none;
 		position: fixed;
 		bottom: 50px;
-		right: 50px;
+		right: 15px;
 		z-index: 99;
 		font-size: 18px;
 		border: none;
@@ -927,6 +968,99 @@
 		background-color: #a7e1f3;
 	  }
 	}
+		// Section-8
+
+	.header_proreties {
+		.header_proreties;
+	}
+	.subscribeNow {
+		padding-bottom: 100px;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 50px;	
+		padding-bottom: 30px;
+	}
+	.inputField {
+		align-self: center;
+		width: 250px;
+		height: 50px;	
+		border-radius: 40px;
+		border: 1px solid #f7f7f7;
+		margin: 10px;
+		text-align: center;
+		box-decoration-break: unset;
+		&:hover {
+			box-shadow: 0 15px 30px #f5f9f9;
+		}
+	}
+	.submit {
+		align-self: center;
+		background-color: #66d4f4;	
+		border-radius: 40px;
+		border: none;	
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: 0.5s; 
+		transition: 0.5s;
+		width: 250px;
+		height: 50px;	
+		font-family: Raleway-Bold;
+		font-size: 14px;
+		color: #ffffff;
+		margin: 10px;	
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 15px 30px #a8dceb;
+		}
+	} 
+		// Section-9 Footer
+	
+	footer {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-around;
+		border-top: 1px solid #dfdfdf;
+		border-bottom: 1px solid #dfdfdf;
+		padding-top: 30px;
+		padding-bottom: 40px;
+		line-height: 1.8em;
+		max-width: 1110px;
+	}
+	.footerLogo {
+		width:20%;
+	}
+	#footerlogo {
+		padding-bottom: 20px;
+	}
+	.footerLinks {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		h4 {
+			font-family: Raleway-Bold;
+			font-size: 18px;
+			color: #494949;
+			padding-bottom: 20px;
+		}
+		a {
+			font-family: Raleway-Medium;
+			font-size: 14px;
+			color: #7c7c7c;
+		}
+	}
+	// @media (min-width: 300px) and (max-width: 620px) {
+	// 	.footerLinks {
+	// 	flex-direction: column;
+	// 	flex-wrap: wrap;
+	// 	}
+	// }
+
+
+
+
 	#GoogleMaps iframe {
 		width: 100%;
 		height: 450px;

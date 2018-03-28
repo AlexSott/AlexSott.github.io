@@ -10,38 +10,32 @@
 	
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/hidenNavbar.css"> -->
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 <body>
 	<div class="full_page">
-		
-		
-		<!-- 2. Валідація.
-		3. гамбургер
-		4. fixed nav --> 
+
 						<!-- Section-1 -->
 		<div class="bg_flaby">
 				<button id="scrollBtn" title="Go to top">Top</button>
 			<div class="wrapper">
-				<!-- <div class="header-wraper"> -->
-					<header>
-						<a href="/">
-							<img id="logo" src="images/logo_top.png" alt="logo">
-						</a>
-						<nav class="navbar" id="myNavbar">
-							
-								<a href="#">home</a>
-								<a href="#">services</a>
-								<a href="#">portfolio</a>
-								<a href="#">blog</a>
-								<a href="#GoogleMaps">contact us</a>
-								<a href="#">login</a>
-								<a href="javascript:void(0);" style="font-size:25px;" 
-									class="icon" onclick="myFunction()">&#9776;</a>
-				
-						</nav>
-					</header>
+				<header id="myNavbar">
+					<a href="/">
+						<img id="logo" src="images/logo_top.png" alt="logo">
+					</a>
+					<nav class="navbar">	
+							<a href="https://store.google.com/au/?hl=en-AU&countryRedirect=true">home</a>
+							<a href="#">services</a>
+							<a href="#">portfolio</a>
+							<a href="#">blog</a>
+							<a href="#GoogleMaps">contact us</a>
+							<a href="#">login</a>
+							<a href="javascript:void(0);" style="font-size:25px;" 
+							class="icon" onclick="myFunction()">&#9776;</a>
+					</nav>
+				</header>
 					
 				<!-- </div> -->
 				<div class="content_flaby">
@@ -49,8 +43,8 @@
 					<p>A Modern Flat design corporate template for free download 
 						with all greet features and trendy look.</p>
 					<div class="btn-group">
-						<button class="btn1" href="#">Google Store</button>
-						<button class="btn2" href="#">Learn More</button>	
+						<button class="btn1"><a href="https://store.google.com/au/?hl=en-AU&countryRedirect=true">Google Store</a></button>
+						<button class="btn2"><a href="https://google.com.ua">Learn More</a></button>	
 					</div>	
 				</div>
 			</div>
@@ -273,6 +267,70 @@
 				</div>
 			</div>
 			</div>	
+				<!-- Section-8 -->
+
+			<div class="subscribeNow">
+				<div class="header_proreties">
+					<p>For latest newsletter</p>
+					<h2>Subscribe now</h2>
+					<hr>
+				</div>
+					<form>
+						<input type="text" class="inputField" name="username" placeholder="Name">
+						<input type="email" class="inputField" name="mail" placeholder="Example@gmail.com" required>
+						<input type="submit" class="submit" value="Submit">
+					</form>
+			</div>
+
+				<!-- Section-9-footer -->
+
+			<footer>
+				<div class="footerLogo">
+					<a href="/">
+						<img id="footerlogo" src="images/footerLogo.png" alt="logo">
+					</a>
+					<p>Flaby is free flat template and available
+						for free downloads but please don't use for sell</p>
+				</div>
+				<div class="footerLinks">
+					<h4>Useful Link</h4>
+					<a href="#">Resourse</a>
+					<a href="#">Dowmloads</a>
+					<a href="#">Graphics</a>
+					<a href="#">Templates</a>
+					<a href="#">UI colors</a>
+				</div>
+				<div class="footerLinks">
+					<h4>Free Goods</h4>
+					<a href="#">Movies</a>
+					<a href="#">Music</a>
+					<a href="#">Videos</a>
+					<a href="#">Games</a>
+					<a href="#">Applications</a>
+				</div>
+				<div class="footerLinks">
+					<h4>Elements</h4>
+					<a href="#">UI Elements</a>
+					<a href="#">Materials</a>
+					<a href="#">Flat UI</a>
+					<a href="#">Print File</a>
+					<a href="#">Flyer</a>
+				</div>
+				<div class="footerLinks">
+					<h4>About Us</h4>
+					<a href="#">Home</a>
+					<a href="#">Portfolio</a>
+					<a href="#">Layourt</a>
+					<a href="#">Blog</a>
+					<a href="#">Contact Us</a>
+				</div>
+			</footer>
+
+
+
+
+
+
 			<div id="GoogleMaps">
 				<br><br>
 				<iframe src="https://www.google.com/maps
@@ -287,17 +345,8 @@
 			</div>	
 	</div>
 		<script src="js/common.js"></script>
-		<script src="js/scroll.js"></script>
-		<script>
-				function myFunction() {
-					var x = document.getElementById("myNavbar");
-					if (x.className === "navbar") {
-						x.className += " responsive";
-					} else {
-						x.className = "navbar";
-					}
-				}
-				</script>
-		<!-- <script src="js/navbarScroll.js"></script> -->
+		<script src="js/scrolltoTop.js"></script>
+		<script src="js/hidenNavbar.js"></script>
+		<script src="js/hamburger.js"></script>
 	</body>
 </html>
