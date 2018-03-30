@@ -159,8 +159,10 @@ h6 {
 }
 .wrapperHeader {
   position: fixed;
+  z-index: 99;
   width: 100%;
   max-width: 1600px;
+  clear: both;
 }
 #myNavbar {
   display: -webkit-box;
@@ -192,9 +194,8 @@ h6 {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .navbar a {
   font-size: 15px;
@@ -296,6 +297,7 @@ h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   padding-top: 300px;
   padding-bottom: 90px;
   margin: 0;
@@ -492,6 +494,10 @@ h6 {
     display: block;
     width: 100%;
   }
+  #myNavbar {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
   .navbar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -507,6 +513,8 @@ h6 {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .navbar a {
     display: none;
@@ -521,7 +529,9 @@ h6 {
   .navbar.responsive .icon {
     position: absolute;
     top: 0;
-    right: 0;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
     background-color: transparent;
   }
   .navbar.responsive a {
@@ -533,9 +543,6 @@ h6 {
     text-align: center;
   }
   .content_flaby {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
     -webkit-box-align: left;
     -webkit-align-items: left;
         -ms-flex-align: left;
@@ -545,8 +552,8 @@ h6 {
     width: 90%;
   }
   .content_flaby h1 {
-    font-size: 24px;
-    line-height: 1.2em;
+    font-size: 26px;
+    line-height: 1.4em;
   }
   .content_flaby p {
     font-size: 18px;
@@ -874,11 +881,12 @@ h6 {
     padding-bottom: 65px;
   }
 }
-@media (max-width: 540px) {
+@media (min-width: 300px) and (max-width: 540px) {
   .container {
     display: block;
     width: 100%;
     padding-top: 10px;
+    padding-bottom: 20px;
   }
   .column_dev,
   .column {
@@ -1329,7 +1337,7 @@ h6 {
 .rowbubble2 {
   padding-bottom: 100px;
 }
-@media (min-width: 420px) and (max-width: 800px) {
+@media (min-width: 550px) and (max-width: 800px) {
   .rowbubble1,
   .rowbubble2 {
     width: 90%;
@@ -1350,6 +1358,9 @@ h6 {
   .rowbubble1 {
     padding-top: 10px;
     padding-bottom: 0;
+  }
+  .rowbubble2 {
+    padding-bottom: 40px;
   }
 }
 .customer {
@@ -1600,7 +1611,6 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
 }
 .header_author h6 {
@@ -1662,12 +1672,10 @@ h6 {
     background-position: center;
   }
   .customer .header_author {
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 0px;
-    padding-bottom: 5px;
     text-align: center;
-    width: 70%;
   }
   .customer .header_author img {
     padding-top: 70px;
@@ -2010,9 +2018,12 @@ sub {
   }
 }
 @media (max-width: 530px) {
+  .pricing-plan {
+    padding-bottom: 50px;
+  }
   .container_pricingPlan {
     display: block;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   .container_pricingPlan .columns_price {
     width: 100%;
@@ -2208,6 +2219,11 @@ footer {
 }
 .footerLogo {
   width: 25%;
+}
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding-top: 15px;
 }
 #footerlogo {
   padding-bottom: 20px;
