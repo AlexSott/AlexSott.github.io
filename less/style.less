@@ -168,7 +168,7 @@
 		justify-content: space-around;
 		align-items: center;
 		border-bottom: 1px solid white;
-		background-color: rgba(120, 192, 249, 0.7);
+		background-color: rgba(120, 192, 249, 0.9);
 		top: 0;
 		left: 0;
 	}
@@ -259,8 +259,6 @@
 	}
 	.wrapper {
 		max-width: 1110px;
-		// position: relative;
-		// z-index: 0;
 		.clearfix;
 		margin-right: auto;
 		margin-left: auto;
@@ -271,7 +269,7 @@
 		padding-top: 300px;
 		padding-bottom: 90px;
 		margin: 0;
-		text-align: left;
+		// text-align: left;
 		flex-wrap: wrap;
 		width: 45%;
 	}
@@ -429,11 +427,14 @@
 		.navbar.responsive {
 			position: relative;
 		}
-		.navbar.responsive .icon {
+		.navbar.responsive a .icon {
 			position: absolute;
 			top: 0;
 			align-self: center;
 			background-color: transparent;
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				text-align: center;
+			}
 			}
 		.navbar.responsive a {
 			float: none;
@@ -442,8 +443,10 @@
 			padding-top: 15px;
 			padding-right: 10px;
 			text-align: center;
+		
 			}
 		.content_flaby {
+			margin-top: 80px;
 			align-items: left;
 			padding: 10px 0 0 10px;
 			margin-right: 0;
@@ -459,6 +462,7 @@
 				overflow: hidden;
 				flex-direction: row;
 				align-items: center;
+				padding-bottom: 45px;
 				.btn1,
 				.btn2 {
 					margin: 6px;
@@ -535,11 +539,12 @@
 			display: block;
 			width: 100%;
 			padding-top: 10px;
-			padding-bottom: 20px;
-		}	
-		.column_dev, .column {
-			padding: 20px;
-		}  
+			padding-bottom: 20px;	
+		.column_dev, 
+		.column {
+			padding: 10px;
+			}  
+		}
 	}	
 			// Section-3
 	
@@ -552,7 +557,7 @@
 	.content {
 		.content-properties;
 		max-width: 1110px;
-		text-align: left;
+		// text-align: left;
 		float: right;
 		width: 50%;
 		padding-top: 130px;
@@ -1059,10 +1064,17 @@
 	@media (min-width: 300px) and (max-width: 450px) {
 		.subscribeNow {
 			padding-bottom: 20px;
+			form {
+				padding-bottom: 0;
+			}
 		}
 	}
 		// Section-9 Footer
 	
+	#GoogleMaps iframe {
+		width: 100%;
+		height: 450px;
+	}
 	footer {
 		margin: 0 auto;
 		max-width: 1110px;
@@ -1092,7 +1104,7 @@
 	.footerLinks {
 		display: flex;
 		flex-direction: column;
-		text-align: left;
+		// text-align: left;
 		p {
 			font-family: Raleway-Medium;
 			font-size: 14px;
@@ -1149,12 +1161,4 @@
 			color: @color-lightGrey;
 			text-decoration: none;
 		}
-	}
-	
-
-
-
-	#GoogleMaps iframe {
-		width: 100%;
-		height: 450px;
 	}

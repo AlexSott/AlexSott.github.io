@@ -177,7 +177,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid white;
-  background-color: rgba(120, 192, 249, 0.7);
+  background-color: rgba(120, 192, 249, 0.9);
   top: 0;
   left: 0;
 }
@@ -301,7 +301,6 @@ h6 {
   padding-top: 300px;
   padding-bottom: 90px;
   margin: 0;
-  text-align: left;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -526,7 +525,7 @@ h6 {
   .navbar.responsive {
     position: relative;
   }
-  .navbar.responsive .icon {
+  .navbar.responsive a .icon {
     position: absolute;
     top: 0;
     -webkit-align-self: center;
@@ -543,6 +542,7 @@ h6 {
     text-align: center;
   }
   .content_flaby {
+    margin-top: 80px;
     -webkit-box-align: left;
     -webkit-align-items: left;
         -ms-flex-align: left;
@@ -573,6 +573,7 @@ h6 {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 45px;
   }
   .content_flaby .btn-group .btn1,
   .content_flaby .btn-group .btn2 {
@@ -585,6 +586,11 @@ h6 {
     text-align: right;
     padding-right: 10px;
     background-position: 10px 13px;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 524px) and all and (-ms-high-contrast: none), screen and (min-width: 250px) and (max-width: 524px) and (-ms-high-contrast: active) {
+  .navbar.responsive a .icon {
+    text-align: center;
   }
 }
 .our_services {
@@ -888,9 +894,9 @@ h6 {
     padding-top: 10px;
     padding-bottom: 20px;
   }
-  .column_dev,
-  .column {
-    padding: 20px;
+  .container .column_dev,
+  .container .column {
+    padding: 10px;
   }
 }
 .unlimited {
@@ -910,7 +916,6 @@ h6 {
 }
 .content {
   max-width: 1110px;
-  text-align: left;
   float: right;
   width: 50%;
   padding-top: 130px;
@@ -2198,6 +2203,13 @@ form {
   .subscribeNow {
     padding-bottom: 20px;
   }
+  .subscribeNow form {
+    padding-bottom: 0;
+  }
+}
+#GoogleMaps iframe {
+  width: 100%;
+  height: 450px;
 }
 footer {
   margin: 0 auto;
@@ -2240,7 +2252,6 @@ footer {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: left;
 }
 .footerLogo p,
 .footerLinks p {
@@ -2300,8 +2311,4 @@ footer {
   font-family: Raleway-Bold;
   color: #7c7c7c;
   text-decoration: none;
-}
-#GoogleMaps iframe {
-  width: 100%;
-  height: 450px;
 }
